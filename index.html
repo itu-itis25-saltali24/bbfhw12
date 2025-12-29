@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Job Application Form</title>
+</head>
+<body>
+
+<h2>Job Application Form</h2>
+
+<form id="applicationForm">
+
+  <div>
+    <label for="tckn">TCKN</label><br>
+    <input type="text" id="tckn" name="tckn" placeholder="11-digit Turkish ID number" required>
+    <p id="tckn_result"></p>
+  </div><br>
+
+  <div>
+    <label for="fullName">Full Name</label><br>
+    <input type="text" id="fullName" name="fullName" placeholder="Name Surname" required>
+    <p id="fullName_result"></p>
+  </div><br>
+
+  <div>
+    <label for="dob">Date of Birth</label><br>
+    <input type="date" id="dob" name="dob" required>
+    <p id="dob_result"></p>
+  </div><br>
+
+  <div>
+    <label>Gender</label><br>
+    <input type="radio" id="male" name="gender" value="Male" required>
+    <label for="male">Male</label><br>
+    <input type="radio" id="female" name="gender" value="Female" required>
+    <label for="female">Female</label>
+  </div><br>
+
+  <div>
+    <label>Skills</label><br>
+    <input type="checkbox" name="skills" value="Java"> Java<br>
+    <input type="checkbox" name="skills" value="JavaScript"> JavaScript<br>
+    <input type="checkbox" name="skills" value="Python"> Python<br>
+    <input type="checkbox" name="skills" value="C++"> C++<br>
+    <input type="checkbox" name="skills" value="C#"> C#
+  </div><br>
+
+  <div>
+    <label for="salaryType">Salary Type</label><br>
+    <select id="salaryType" required>
+      <option value="">Select salary type</option>
+      <option value="Gross">Gross</option>
+      <option value="Net">Net</option>
+    </select>
+  </div><br>
+
+  <div>
+    <label for="salaryAmount">Salary Expectation</label><br>
+    <input type="number" id="salaryAmount" required>
+    <p id="salary_result"></p>
+  </div><br>
+
+  <div>
+    <label for="experience">Years of Experience</label><br>
+    <input type="number" id="experience" required>
+    <p id="experience_result"></p>
+  </div><br>
+
+  <button type="submit">Submit Application</button>
+</form>
+
+<p id="result"></p>
+<textarea id="previewBox" rows="10" cols="50" readonly></textarea>
+
+<script src="TCKN_validation.js"></script>
+<script src="FullName_validation.js"></script>
+<script src="DOB_validation.js"></script>
+<script src="Salary_validation.js"></script>
+<script src="Experience_validation.js"></script>
+<script src="main.js"></script>
+
+</body>
+</html>
